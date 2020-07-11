@@ -7,10 +7,12 @@ def getData(str : String) = str.split(",").toList match {
 def parse(rec: RawData) =
   ParsedData(rec.code.trim.toInt, rec.name.trim)
 
-def pad(data: ParsedData) =
+type Padding = 2 | 3 | 4 | 5
+
+def pad(data: ParsedData, padding: Padding) =
   PaddedData(
-    s"${"%03d".format(data.code)} ${data.name.trim}",
-    data.code.formatted("%03d"),
+    s"${s"%0${padding}d".format(data.code)} ${data.name.trim}",
+    data.code.toString,
     data.name
   )
 

@@ -12,8 +12,8 @@ class CSVFileTest extends munit.FunSuite {
     val source: Source = Source.fromIterable(inputContents)
     val csv = CSVFile(source)
     assertEquals(csv, CSVFile("display, code, name", List(
-      "001 A,001,A",
-      "067 B,067,B",
+      "001 A,1,A",
+      "067 B,67,B",
       "5452 C,5452,C"
     )))
   }

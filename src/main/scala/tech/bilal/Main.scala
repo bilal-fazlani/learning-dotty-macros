@@ -27,7 +27,7 @@ object Main  {
     }
     else {
       val csvFile = CSVFile(Source.fromFile(args.head))
-      writeFile(fileName =  args.head+"_padded", csvFile.title, csvFile.values)
+      writeFile(fileName =  args.head+"_padded.csv", csvFile.title, csvFile.values)
       println("DONE")
       
       0

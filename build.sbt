@@ -3,7 +3,7 @@ val dottyVersion = "0.25.0-RC2"
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "csv-padding",
+    name := "csv-parse",
     version := "0.1.0",
 
     scalaVersion := dottyVersion,
