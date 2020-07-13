@@ -1,8 +1,11 @@
 package bilal.tech.scala.csv
 
 object MainTest extends App {
-  case class A(i: Int, s: String) derives Decoder
-  println(CSV.decode[A]("12,asd"))
+  case class CaseClass(number: Option[Int], string: Option[String], boolean: Option[Boolean]) derives Decoder
+  println(CSV.decode[CaseClass](", ,"))
 }
 
-
+/*
+todo: Left(NoValue) -> Left(NoValue("no value found for foo.bar"))  
+todo: support case class composition 
+ */

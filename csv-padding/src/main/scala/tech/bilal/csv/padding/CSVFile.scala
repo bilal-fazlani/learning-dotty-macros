@@ -10,7 +10,7 @@ object CSVFile {
       .getLines()
       .toList
 
-    val padF = pad(_, 3)
+    val padF = pad(_, 4)
     
     val values = lines
       .drop(1)
